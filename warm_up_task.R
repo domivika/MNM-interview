@@ -11,14 +11,7 @@ str2change <- function(string){
   x
 }
 
-countLetters <- function(string){
-  letters_table <- table(unlist(lapply(1:nchar(string),function(x){
-    tolower(substr(string,x,x))
-  })))
-  length(letters_table[letters_table>=2])
-}
-
-countLetters("AaABBcD") # should give only 3 duplicates <- D is single
+str2change("abcdef")
 
 
 countLetters <- function(string){
@@ -27,3 +20,5 @@ countLetters <- function(string){
   })))
   length(letters_table[letters_table>=2])
 }
+
+countLetters("AaAbBCcD") # should give only 3 duplicates <- D is single
