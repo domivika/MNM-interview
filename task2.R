@@ -23,7 +23,7 @@ nrow(manta_no_BND)
 ### 2) 
 manta_DEL <- manta.vcf.df |> filter(str_detect(ID, "DEL"))
 
-#joined boxplot fro all SVs
+#joined boxplot for all SVs
 boxplot(as.numeric(as.character(manta.vcf.df$SVLEN))~ as.numeric(as.character(manta.vcf.df$CHROM)))
 
 #boxplots per chromosome
@@ -34,7 +34,7 @@ lapply(chr_list, function(x){boxplot(as.numeric(as.character(x[,10]))~ as.numeri
 ### 3)
 manta_FAIL <- manta.vcf.df |> filter(!str_detect(FILTER, "PASS"))
 nrow(manta_FAIL)
-#tail(names(sort(table(manta_FAIL$FILTER))), 1)
+#tail(names(sort(table(manta_FAIL$FILTER))), 1)  # the most frequent element
 pie(table(manta_FAIL$FILTER))
 
 
