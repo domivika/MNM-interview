@@ -24,7 +24,7 @@ nrow(manta_no_BND)
 manta_DEL <- manta.vcf.df |> filter(str_detect(ID, "DEL"))
 
 #joined boxplot for all SVs
-boxplot(as.numeric(as.character(manta.vcf.df$SVLEN))~ as.numeric(as.character(manta.vcf.df$CHROM)))
+boxplot(as.numeric(as.character(manta.vcf.df$SVLEN))~ as.numeric(as.character(manta.vcf.df$CHROM)), xlab = "Chromosomes", ylab = "SV length")
 
 #boxplots per chromosome
 chr_list = split.data.frame(manta_DEL, manta_DEL$CHROM )
