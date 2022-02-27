@@ -19,6 +19,7 @@ manta.vcf.df <- cbind(as.data.frame(getFIX(vcf)), INFO2df(vcf))
 manta_no_BND <- manta.vcf.df |> filter(!str_detect(ID, "BND"))  
 nrow(manta_no_BND)
 
+
 ### 2) 
 manta_DEL <- manta.vcf.df |> filter(str_detect(ID, "DEL"))
 
