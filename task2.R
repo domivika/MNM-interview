@@ -5,13 +5,9 @@ library(vcfR)
 setwd("D:/Dominika/mnm_interview")
 
 manta <- "tumor_vs_normal.manta.somatic.vcf" # the file must be unzipped 
-
 pkg <- "pinfsc50"
-
 vcf_file <- system.file("extdata", "pinf_sc50.vcf.gz", package = pkg)
-
 vcf <- read.vcfR( manta, verbose = FALSE )
-
 manta.vcf.df <- cbind(as.data.frame(getFIX(vcf)), INFO2df(vcf))
 
 
