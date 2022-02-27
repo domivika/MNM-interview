@@ -24,7 +24,7 @@ boxplot(as.numeric(as.character(manta.vcf.df$SVLEN))~ as.numeric(as.character(ma
 
 #boxplots per chromosome
 chr_list = split.data.frame(manta_DEL, manta_DEL$CHROM )
-lapply(chr_list, function(x){boxplot(as.numeric(as.character(x[,10]))~ as.numeric(as.character(x[, 1])))} )
+lapply(chr_list, function(x){boxplot(as.numeric(as.character(x[,10]))~ as.numeric(as.character(x[, 1])))})  # TODO: xlabs and ylabs must be adjusted
 
 
 ### 3)
