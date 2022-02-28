@@ -6,8 +6,6 @@ cd /data/leuven/343/vsc34319/MNM_interview/MNM-interview/task3
 
 awk 'BEGIN{FS="\t"} $0 ~ /^#/ || $7 == "PASS"{print}' tumor_vs_normal.manta.somatic.vcf > tumor_vs_normal.manta.somatic_PASS.vcf
 
-snpEff hg19 tumor_vs_normal.manta.somatic_PASS.vcf > tumor_vs_normal.manta.somatic_PASS.ann.vcf
-
 
 
 # task 3.2
