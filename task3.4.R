@@ -15,7 +15,4 @@ manta_ann_df <- cbind(as.data.frame(getFIX(vcf)), INFO2df(vcf))
 manta_LOF <- manta_ann_df |> filter(!str_detect(LOF, "NA"))
 manta_LOF_short <- manta_LOF$LOF
 manta_LOF_genes <- as.data.frame(manta_LOF_short)  # TODO: extract genes
-
-
-
-
+manta_LOF_genes
