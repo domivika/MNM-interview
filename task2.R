@@ -1,5 +1,4 @@
 library(dplyr)
-library(stringr)
 library(vcfR)
 
 setwd("D:/Dominika/mnm_interview")
